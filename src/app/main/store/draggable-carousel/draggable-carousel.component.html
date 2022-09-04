@@ -1,13 +1,70 @@
-<!-- <div class="carouselContainer">
-  <div class="carouselOfImages">
-          <div class="carouselImage">Item</div>
-          <div class="carouselImage">Item</div>
-          <div class="carouselImage">Item</div>
-          <div class="carouselImage">Item</div>
-          <div class="carouselImage">Item</div>
+<div class="container">
+
+  <div class="row mb-5">
+    <div class="col-md flex justify-center items center">
+      <div class="font-semibold text-2xl text-gray-500">
+        Çok Satanlara Bir Göz At
+      </div>
+    </div>
   </div>
-  <div class="gradient-left">
-  </div>
-  <div class="gradient-right">
-  </div>
-</div> -->
+
+  <swiper #swiper [virtual]="true" [config]="config">
+
+    <ng-template swiperSlide>
+      <div class="img-box cursor-pointer"><img src="../../../assets/images/tshirt/main-tshirt.jpg" class="img-fluid"
+          alt=""></div>
+    </ng-template>
+
+
+    <ng-template swiperSlide>
+      <div class="img-box cursor-pointer"><img src="../../../assets/images/jacket/main-jacket.jpg" class="img-fluid"
+          alt=""></div>
+    </ng-template>
+
+    <ng-template swiperSlide>
+      <div class="img-box cursor-pointer"><img src="../../../assets/images/sweatshirt/main-sweatshirt.jpg"
+          class="img-fluid" alt="">
+      </div>
+    </ng-template>
+
+    <ng-template swiperSlide>
+      <div class="img-box cursor-pointer"><img src="../../../assets/images/tshirt/main-tshirt.jpg" class="img-fluid"
+          alt=""></div>
+    </ng-template>
+
+    <ng-template swiperSlide>
+      <div class="img-box cursor-pointer"><img src="../../../assets/images/jacket/main-jacket.jpg" class="img-fluid"
+          alt=""></div>
+    </ng-template>
+
+    <ng-template swiperSlide>
+      <div class="img-box cursor-pointer"><img src="../../../assets/images/sweatshirt/main-sweatshirt.jpg"
+          class="img-fluid" alt="">
+      </div>
+    </ng-template>
+
+    <ng-template swiperSlide>
+      <div class="img-box cursor-pointer"><img src="../../../assets/images/jacket/main-jacket.jpg" class="img-fluid"
+          alt=""></div>
+    </ng-template>
+
+    <ng-template swiperSlide>
+      <div class="img-box cursor-pointer"><img src="../../../assets/images/sweatshirt/main-sweatshirt.jpg"
+          class="img-fluid" alt="">
+      </div>
+    </ng-template>
+
+    <ng-template swiperSlide>
+      <div class="img-box cursor-pointer"><img src="../../../assets/images/jacket/main-jacket.jpg" class="img-fluid"
+          alt=""></div>
+    </ng-template>
+
+    <ng-template swiperSlide>
+      <div class="img-box cursor-pointer"><img src="../../../assets/images/sweatshirt/main-sweatshirt.jpg"
+          class="img-fluid" alt="">
+      </div>
+    </ng-template>
+
+
+  </swiper>
+</div>
