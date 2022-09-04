@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --e-white: #F2F2F2;
+    --e-black: #3D3D41;
+    --e-gray: #797B81;
+    --e-orange: #D9A577;
+    --e-bisque: #D9B89C;
+}
+
+@layer base {
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+    html {
+        font-family: 'Roboto', sans-serif;
+
+    }
+}

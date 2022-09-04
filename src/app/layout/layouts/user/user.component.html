@@ -1,0 +1,42 @@
+<div class="flex flex-col flex-auto w-full min-w-0">
+
+  <!-- Header -->
+  <div class="fixed flex flex-0 items-center w-full h-16 px-4 md:px-6 z-10 shadow bg-card  print:hidden" style="background-color: var(--e-white);" >
+
+    <div class="row flex justify-between items-center w-full ">
+      <div class="col">
+
+        <app-menu></app-menu>
+
+      </div>
+
+      <div class="col flex justify-center items-center ">
+        <img routerLink="/" src="../../../../assets/logo/hoodie.png" width="50" height="auto" class="cursor-pointer">
+      </div>
+
+      <div class="col flex justify-end items-center  position-relative ">
+        <a href="/login" class="font-semibold text-sm font mr-2 cursor-pointer ">
+          Giriş Yap
+        </a>
+
+        <app-cart> </app-cart>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Content -->
+  <div class="flex flex-col flex-auto position-relative">
+    <!-- *ngIf="true" hack is required here for router-outlet to work correctly.
+           Otherwise, layout changes won't be registered and the view won't be updated! -->
+    <router-outlet *ngIf="true"></router-outlet>
+  </div>
+
+  <!-- Footer -->
+  <div
+    class="relative flex flex-0 items-center justify-start bg-gray-100 w-full mt-12 h-24 px-4 md:px-6 z-49 border-t bg-card print:hidden">
+    <span class="font-medium text-secondary">BE COMPANY &copy; 2022 </span>
+  </div>
+
+</div>

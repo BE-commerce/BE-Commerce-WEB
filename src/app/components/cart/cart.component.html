@@ -1,0 +1,41 @@
+<button (click)="openSidenav()"
+  class="w-12 h-12 border-2 border-gray-300 flex justify-center items-center rounded-full">
+  <div
+    class="w-5 h-5 bg-gray-300 border border-gray-200 rounded-full position-absolute top-0 right-0 mr-2 text-xs text-center ">
+    7</div>
+  <img src="../../../../assets/icons/bag.png" width="25" height="auto" class="cursor-pointer">
+</button>
+
+<div id="mySidenav" #mySidenav class="sidenav">
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col">
+        <div class="closebtn cursor-pointer" (click)="closeSidenav()">&times;</div>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col flex justify-center items-center">
+
+        <img src="../../../assets/icons/empty-cart.png" width="100" height="100" alt="">
+      </div>
+    </div>
+
+    <div class="row mt-3 ">
+      <div class="col flex justify-center items-center">
+
+
+        <div class="text-xl font-semibold text-gray-500">
+          Sepetinize Bir Ürün Ekleyiniz...
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+</div>

@@ -1,0 +1,136 @@
+.bg {
+  /* The image used */
+  background-image: url("https://www.kaft.com/static/images/content/banner/617_2.webp?1661422906000");
+
+  /* Full height */
+  height: 100%;
+  width: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.category-card {
+  position: relative;
+  /* width: 50%; */
+}
+
+.category-image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.category-centered {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.category-card:hover .category-image {
+  opacity: 0.7;
+  transform: scale(1.01);
+}
+
+.category-card:hover .category-centered {
+  opacity: 1;
+}
+
+.category-button {
+  background-color: var(--e-black);
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  cursor: pointer;
+}
+
+
+h2 {
+	color: #696969;
+	font-size: 26px;
+	font-weight: 300;
+	text-align: center;
+	position: relative;
+	margin: 40px 70px;
+	text-transform: uppercase;
+	font-family: 'Open Sans', sans-serif;
+}
+h2::after {
+	content: "";
+	width: 100%;
+	position: absolute;
+	margin: 0 auto;
+	height: 1px;
+	border-radius: 1px;
+	background: #d4d4d4;
+	left: 0;
+	right: 0;
+	bottom: 14px;
+}
+h2 span {
+	display: inline-block;
+	padding: 0 25px;
+	background:#ebebeb;
+	position:relative;
+	z-index:2;
+}
+.carousel {	
+	margin: 0 auto;
+	padding: 0 68px;
+}
+.carousel .carousel-item {
+	text-align: center;
+	overflow: hidden;
+	height: 160px;
+}
+.carousel .carousel-item .img-box {
+	background: #fff;
+	padding: 9px;
+	box-shadow: 0 6px 20px -6px rgba(0,0,0,0.4);
+}
+.carousel .carousel-item img {
+	margin: 0 auto;
+}
+.carousel-control-prev, .carousel-control-next {
+	width: 68px;
+	background: none;
+}
+.carousel-control-prev i, .carousel-control-next i {
+	font-size: 28px;
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	margin-top: -15px;
+	z-index: 5;
+	left: 0;
+	right: 0;
+	color: rgba(0, 0, 0, 0.8);
+	text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+.carousel-indicators {
+	bottom: -40px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	border: none;
+	border-radius: 50%;
+	margin: 1px 4px;
+	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+.carousel-indicators li {	
+	background: #999;
+	border-color: transparent;
+}
+.carousel-indicators li.active {
+	background: #555;
+}
