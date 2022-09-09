@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common'; 
-import { StoreModule } from './store/store.module';
+import { CommonModule } from '@angular/common';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    StoreModule
+    HomeModule
   ],
   declarations: []
 })

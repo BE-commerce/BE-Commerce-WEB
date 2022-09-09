@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router'; 
+import { RouterModule, Routes } from '@angular/router';
 import { SignInComponent } from './auth/auth/sign-in/sign-in.component';
 import { SignUpComponent } from './auth/auth/sign-up/sign-up.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AdminComponent } from './layout/layouts/admin/admin.component';
 import { UserComponent } from './layout/layouts/user/user.component';
-import { StoreComponent } from './main/store/store.component';
+import { HomeComponent } from './main/home/home.component';
 import { AuthGuard } from './_guards/auth/auth.guard';
 
 const routes: Routes = [
@@ -18,9 +18,11 @@ const routes: Routes = [
     path: "",
     component: UserComponent,
     children: [
-      { path: "", component: StoreComponent },
+      { path: "", component: HomeComponent },
       { path: "login", component: SignInComponent },
       { path: "register", component: SignUpComponent },
+      { path: 'store', loadChildren: () => import('../app/modules/store/store.module').then(m => m.StoreModule) },
+
     ]
   },
 

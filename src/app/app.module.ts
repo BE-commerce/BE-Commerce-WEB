@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth/auth.module'; 
 import { LayoutModule } from './layout/layout.module';
 import { MainModule } from './main/main.module';
+import { StoreModule } from './modules/store/store.module';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
 
 @NgModule({
@@ -22,7 +23,8 @@ import { JwtInterceptor } from './_helpers/jwt.interceptor';
     LayoutModule,
     RouterModule,
     AuthModule,
-    MainModule
+    MainModule,
+    StoreModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
