@@ -9,7 +9,7 @@
     right: 0;
     background-color: var(--e-white);
     overflow-x: hidden;
-    transition: 0.5s; 
+    transition: 0.3s; 
   }
   
   .sidenav a {

@@ -20,8 +20,7 @@ export class DraggableCarouselComponent implements OnInit {
   ngOnInit() {
 
   }
-  config: SwiperOptions = {
-    slidesPerView: 5,
+  config: SwiperOptions = { 
     spaceBetween: 50,
     breakpoints: {
       // when window width is >= 320px
@@ -36,7 +35,7 @@ export class DraggableCarouselComponent implements OnInit {
       },
       // when window width is >= 640px
       640: {
-        slidesPerView: 5,
+        slidesPerView: 6,
         spaceBetween: 40
       }
     },

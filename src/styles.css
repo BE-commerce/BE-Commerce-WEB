@@ -6,6 +6,11 @@
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --e-white: #F2F2F2;
     --e-black: #3D3D41;

@@ -6,13 +6,15 @@ import { FiltersComponent } from './filters/filters.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { StoreRoutes } from './store.routing';
+import { TshirtComponent } from './categories/tshirt/tshirt.component';
+import { SweatshirtComponent } from './categories/sweatshirt/sweatshirt.component';
 
 @NgModule({
   imports: [
     CommonModule,
     SharedModule,
-    StoreRoutes
+    StoreRoutes,
   ],
-  declarations: [StoreComponent, ProductListComponent, FiltersComponent, SearchBarComponent]
+  declarations: [StoreComponent, ProductListComponent, FiltersComponent, SearchBarComponent, TshirtComponent, SweatshirtComponent]
 })
 export class StoreModule { }

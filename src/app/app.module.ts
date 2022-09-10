@@ -5,11 +5,11 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AuthModule } from './auth/auth/auth.module'; 
+import { AuthModule } from './auth/auth/auth.module';
 import { LayoutModule } from './layout/layout.module';
 import { MainModule } from './main/main.module';
 import { StoreModule } from './modules/store/store.module';
-import { JwtInterceptor } from './_helpers/jwt.interceptor';
+import { JwtInterceptor } from './_helpers/jwt.interceptor'; 
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { JwtInterceptor } from './_helpers/jwt.interceptor';
     RouterModule,
     AuthModule,
     MainModule,
-    StoreModule
+    StoreModule, 
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

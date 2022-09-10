@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'; 
 
 @Component({
   selector: 'app-filters',
@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FiltersComponent implements OnInit {
 
   constructor() { }
+ 
 
   ngOnInit() {
   }

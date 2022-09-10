@@ -37,6 +37,11 @@ export class CartComponent implements OnInit {
       'width',
       '0'
     ) 
+    this.renderer.setStyle(
+      this.sidenav.nativeElement,
+      'opacity',
+      '0'
+    ) 
   }
 
   openSidenav() {
@@ -45,6 +50,11 @@ export class CartComponent implements OnInit {
       'width',
       '400px'
     )  
+    this.renderer.setStyle(
+      this.sidenav.nativeElement,
+      'opacity',
+      '1'
+    ) 
   }
 
 }
