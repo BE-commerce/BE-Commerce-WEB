@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Login } from '../../model/login';
 import { AuthService } from '../../service/auth.service';
 
@@ -10,7 +11,11 @@ import { AuthService } from '../../service/auth.service';
 })
 export class SignUpComponent implements OnInit {
 
-  constructor(private authService: AuthService, private fb: FormBuilder) { }
+  constructor(
+    private authService: AuthService,
+    private fb: FormBuilder,
+    private router: Router
+  ) { }
 
   loginDTO: Login = new Login()
 
@@ -22,8 +27,8 @@ export class SignUpComponent implements OnInit {
 
   createForm() {
     this.registerForm = this.fb.group({
-      firstname: ['Burak', [Validators.required]],
-      lastname: ['Esnglu', [Validators.required]],
+      firstName: ['Burak', [Validators.required]],
+      lastName: ['Esnglu', [Validators.required]],
       email: ['register@gmail.com', [Validators.required, Validators.email]],
       password: ['123456', [Validators.required]],
       confirmPassword: ['123456', [Validators.required]],
@@ -36,21 +41,31 @@ export class SignUpComponent implements OnInit {
   }
 
   postRequest() {
-    let user = {
-      "firstName": "Brasdk",
-      "lastName": "Esnewqglu",
-      "email": "burakesngluu@gmail.com",
-      "password": "1523132ewq9"
-    }
+    // let user = {
+    //   firstName: "Brasdk",
+    //   lastName: "Esnewqglu",
+    //   email: "burakesngluu@gmail.com",
+    //   password: "1523132ewq9"
+    // }
 
-    this.loginDTO = user
+    this.loginDTO = this.registerForm.value
+    debugger
 
     this.authService.login(this.loginDTO).subscribe((res) => {
       console.log(res)
+
+      alert("Hesabınız oluşturulmuştur. Giriş Sayfasına yönlendiriliyorsunuz...")
+
+      setTimeout(() => {
+        this.router.navigate(['/login']);
+      }, 1000);
+
+
     }, err => {
       console.log(err)
     }
     )
+
   }
 
 }

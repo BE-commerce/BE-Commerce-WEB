@@ -45,4 +45,18 @@ export class SignInComponent implements OnInit {
     this.router.navigate(['/home']);
   }
 
+
+  postRequest() {
+
+    this._auth.signIn().subscribe((res:any) => {
+      console.log(res)
+
+
+    }, err => {
+      console.log(err)
+    }
+    )
+
+  }
+
 }

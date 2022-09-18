@@ -73,7 +73,11 @@ export class AuthService extends ApiService {
 
 
   login(login: Login): Observable<any> {
-    return this.post("login/save", login)
+    return this.post("login/create", login)
+  }
+
+  signIn(): Observable<any> {
+    return this.get("login/test")
   }
 
 
